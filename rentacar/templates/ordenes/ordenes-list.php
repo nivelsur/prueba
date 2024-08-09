@@ -61,6 +61,7 @@ $ordenes = $wpdb->get_results($wpdb->prepare("
     AND (%s = '' OR u.usuario LIKE %s)
     AND (%s = '' OR o.fecha_entrada >= %s)
     AND (%s = '' OR o.fecha_salida <= %s)
+    ORDER BY o.id DESC
 ", $user_search, '%' . $wpdb->esc_like($user_search) . '%', $fecha_entrada, $fecha_entrada, $fecha_salida, $fecha_salida));
 
 ?>
