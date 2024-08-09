@@ -1,0 +1,614 @@
+/* Import Roboto font */
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+
+p, label, input, select, textarea, th, td, .button {
+    font-size: 14px;
+    color: #000;
+}
+
+/* Modulo ventana modal de eliminacion */
+
+#confirm-modal{
+    display: flex;
+    width: 50%;
+    margin:0 auto; 
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1001;
+}
+.modal-content-boton{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+.modal-content h2 , p{
+    width:100%;
+    text-align:center;
+}
+#confirm-delete , #cancel-delete {/*.modal-content  se elimino del principio*/
+    display: flex;
+    width: 25%;
+    gap: 10px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background: #0073aa;
+    border-radius: 5px;
+    border: 1px solid #0073aa;
+}
+.button-primary {
+    background: #0073aa;
+    border: 1px solid #0073aa;
+}
+/* Estiliza el formulario */
+#filtros-ordenes {
+    margin 0 auto; 
+    padding: 10px 0px 10px 0px;
+    width: 100%; /* Asegura que el formulario use el ancho del contenedor */
+}
+#filtros-ordenes input{
+    font-size: 14px;
+}
+#filtros-ordenes a{
+    font-family:sans-serif;
+    color:#000;
+    font-weight:500;
+    font-size: 14px;
+    margin: 0px 5px 0px 0px;
+}
+
+
+/* Estilo general para la secciÃƒÆ’Ã‚Â³n de configuraciÃƒÆ’Ã‚Â³n */
+.wrap h1 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* Estilo para las tablas de formularios */
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilo para los encabezados de las filas de la tabla */
+.form-table th {
+    width: 15%;
+    text-align: left;
+    padding: 8px;
+}
+
+/* Estilo para las celdas de contenido de la tabla */
+.form-table td {
+    padding: 5px;
+}
+
+/* Estilo para la tabla de horarios */
+.horarios-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+/* Estilo para las celdas de la tabla de horarios */
+.horarios-table td {
+    padding: 5px;
+}
+
+/* Estilo para las filas de la tabla de horarios */
+.horarios-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para los dÃƒÆ’Ã‚Â­as de la semana y campos de horarios en una lÃƒÆ’Ã‚Â­nea */
+.horario-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.horario-row label {
+    flex: 1;
+    margin-right: 0px;
+}
+
+.horario-row input[type="text"] {
+    width: 300px;
+    margin-right: 10px;
+}
+
+/* Estilo para el botÃƒÆ’Ã‚Â³n de guardar */
+.submit {
+    margin-top: 1em;
+}
+
+
+/* CALENDARIO */
+
+/* Estilos personalizados para el calendario */
+#calendar {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#wpbody-content > div.wrap > a{
+    margin-bottom:10px;
+}
+
+.fc-header-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Estilos personalizados para Rentacar */
+.wrap {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.wrap-orden-new {
+    margin: 20px;
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.wrap-orden-new h1 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+.wrap-orden-new > .form-table > label {
+    display:flex;
+    width: 100%;
+}
+
+
+.wrap-list {
+    margin:10px 10px 10px -10px;
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.wrap-list h1 {
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.wrap-list .button {
+    display: inline-block;
+    margin: 5px;
+    padding: 0px 10px;
+    color: #fff;
+    background: #0073aa;
+    border-radius: 5px;
+    border: 1px solid #0073aa;
+}
+.wrap-list .page-title-action {
+    display: inline-block;
+    margin: 5px;
+    text-decoration:none;
+    padding: 5px 20px;
+    color: #fff;
+    background: #495057;
+    border: 1px solid #495057;
+    border-radius: 3px;
+}
+.wrap-list .page-title-action:hover {
+    display: inline-block;
+    text-decoration:none;
+    margin: 5px;
+    padding: 5px 20px;
+    color: #000;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.wrap-list tbody span{
+    display:none;            
+}
+.wrap-list td {
+    vertical-align: middle;
+}
+.wrap-list #filtros-ordenes{
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+}
+
+/*usuarios-new*/
+.wrap-usuarios-new {
+    margin: 10px 10px 10px 0px;
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.wrap-usuarios-new h1 {
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+/*vehiculos-new*/
+.wrap-vehiculos-new {
+    margin: 10px 10px 10px 0px;
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.wrap-vehiculos-new h1 {
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+                    
+.wrap-vehiculos-new td{
+    width:100%;
+    display:flex;
+    gap:10px;
+}
+.wrap-vehiculos-new fieldset{
+    display:flex;
+    gap:10px;
+}
+
+/*Panel principal*/
+.rentacar-dashboard{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+width: 100%;
+justify-content: space-between;
+gap: 10px;
+}
+.panel-ordenes{
+    background: #fff;
+    width:49.5%;
+    padding:20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.panel-calendario{
+    background: #fff;
+    width:49.5%;
+    padding:20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.ganancias-mensuales{
+    background: #fff;
+    width:100%;
+    padding:20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+/* Panel Headers */
+.panel-ordenes h2{
+    font-size: 1.5em;
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.panel-calendario h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.ganancias-mensuales h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+/* Orders Table */
+.panel-ordenes table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.panel-ordenes th, .panel-ordenes td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.panel-ordenes th {
+    background: #f9f9f9;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .fc-header-toolbar {
+        flex-direction: column;
+    }
+
+    .fc-header-toolbar .fc-left,
+    .fc-header-toolbar .fc-center,
+    .fc-header-toolbar .fc-right {
+        margin-bottom: 10px;
+    }
+    .rentacar-dashboard{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+width: 100%;
+justify-content: space-between;
+gap: 10px;
+}
+.panel-ordenes{
+    background: #fff;
+    width:100%;
+    padding:20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.panel-calendario{
+    background: #fff;
+    width:100%;
+    padding:20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.ganancias-mensuales{
+    background: #fff;
+    width:100%;
+    padding:20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.wp-list-table th, .wp-list-table td {
+            display: block;
+            width: 100%;
+        }
+        .fc .fc-view-harness {
+    flex-grow: 1;
+    position: relative;
+    padding-bottom: 420px;
+}
+        .wp-list-table th {
+            background: #f1f1f1;
+            padding: 10px;
+            display:none;/*desactiva los titulos en*/
+        }
+
+        .wp-list-table td {
+            
+            padding: 10px;
+            border-top: 1px solid #eee;
+        }
+
+        .wp-list-table th, .wp-list-table td {
+            text-align: left;
+        }
+
+        .wp-list-table tr {
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+        }
+
+        .wp-list-table tbody {
+            display: block;
+        }
+        .wp-list-table tbody tr{
+            display: block;
+        }
+
+        .wp-list-table td::before {
+            content: attr(data-title);
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .wp-list-table td.actions {
+            text-align: right;
+        }
+
+        #filtros-ordenes input[type="text"],
+        #filtros-ordenes input[type="date"],
+        #filtros-ordenes input[type="submit"] {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .panel-ordenes, .panel-calendario, .panel-ganancias {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            /*Ordenes-new*/
+            .wrap-orden-new {
+            margin: 10px 10px 10px 0px;
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            }
+            .wrap-orden-new h1 {
+                text-align: center;
+                font-size: 1.5em;
+                margin-bottom: 1em;
+            }
+            .wrap-orden-new > .form-table > label {
+                width: 100%;
+            }
+            .wrap-orden-new table {
+                width: 100%;
+            }
+            .wrap-orden-new tbody {
+                width: 100%;
+            }
+            .wrap-orden-new tbody td{
+                width: 100%;
+            }
+            .wrap-orden-new td{
+                width:100%;
+                display:flex;
+                gap:10px;
+            }
+            .wrap-orden-new td input{
+                width:50%;
+            }
+            .wrap-orden-new th {
+                width: 100%;
+                display:inline-block;
+            }
+            .wrap-orden-new #precio_total, #adelanto_alquiler, #saldo_pagar {
+                width: 100%;
+            }
+            .wrap-orden-new button{
+                width: 100%;
+            }
+            .wrap-list tbody span{
+                float:left;
+                display: contents;
+            }
+
+            /*vehiculos-new*/
+            .wrap-vehiculos-new {
+            margin: 10px 10px 10px 0px;
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            }
+            .wrap-vehiculos-new h1 {
+                text-align: center;
+                font-size: 1.5em;
+                margin-bottom: 1em;
+            }
+            .wrap-vehiculos-new > .form-table > label {
+                width: 100%;
+            }
+            .wrap-vehiculos-new table {
+                width: 100%;
+            }
+            .wrap-vehiculos-new tbody {
+                width: 100%;
+            }
+            .wrap-vehiculos-new tbody td{
+                width: 100%;
+            }
+            .wrap-vehiculos-new td{
+                width:100%;
+                display:flex;
+                gap:10px;
+            }
+            .wrap-vehiculos-new fieldset{
+                display:flex;
+                gap:10px;
+            }
+            .wrap-vehiculos-new th {
+                width: 100%;
+                display:inline-block;
+            }
+            .wrap-vehiculos-new .submit input{
+                width: 100%; 
+            }
+
+            /*Usuarios-new*/
+            .wrap-usuarios-new {
+            margin: 10px 10px 10px 0px;
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            }
+            .wrap-usuarios-new h1 {
+                text-align: center;
+                font-size: 1.5em;
+                margin-bottom: 1em;
+            }
+            .wrap-usuarios-new > .form-table > label {
+                width: 100%;
+            }
+            .wrap-usuarios-new table {
+                width: 100%;
+            }
+            .wrap-usuarios-new tbody {
+                width: 100%;
+            }
+            .wrap-usuarios-new tbody td{
+                width: 100%;
+            }
+            .wrap-usuarios-new td{
+                width:100%;
+                display:flex;
+                gap:10px;
+                flex-direction: column;
+                align-items: flex;
+            }
+            .wrap-usuarios-new fieldset{
+                display:flex;
+                gap:10px;
+            }
+            .wrap-usuarios-new th {
+                width: 100%;
+                display:inline-block;
+            }
+            .wrap-usuarios-new .submit input{
+                width: 100%; 
+            }
+}
